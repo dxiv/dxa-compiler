@@ -6,9 +6,11 @@ Reference compiler for **DEXA** — a statically typed, deterministic language f
 
 **Status:** This repo is a **placeholder**. The compiler is currently developed in [dxa-dev](https://github.com/dxiv/dxa-dev). When the monorepo is split, this repo will hold the compiler source, CLI, and examples.
 
+**What’s here now:** A minimal stub you can build and run: `src/lib.rs` exposes `run_source()` (returns an error directing to dxa-dev) and `VERSION`; `src/main.rs` is a `dxc` CLI that reads a file and calls `run_source`. Run `cargo build --release` and `./target/release/dxc any.dxa` to see the placeholder message.
+
 ---
 
-## What it does
+## What it does (after split)
 
 - **Input:** DEXA source (`.dxa` files) — functions, models, contracts, top-level `let` globals.
 - **Pipeline:** Lexer → Parser (AST) → Typechecker → Lowering (DX-IR) → IR validation → Interpreter.
@@ -20,7 +22,7 @@ The compiler is single-pass: no separate “runtime” binary; the same binary c
 
 ## CLI
 
-When this repo is populated from dxa-dev, you’ll get the `dxc` binary:
+Right now you’ll get the full compiler (currently a stub: usage + placeholder error):
 
 ```bash
 dxc <file.dxa>
@@ -53,14 +55,14 @@ Intended public surface (from the current dxa-dev implementation):
 
 ---
 
-## Build and test (after split)
+## Build and test
 
 ```bash
 cargo build --release
 cargo test
 ```
 
-The `dxc` CLI will be built from `src/main.rs`; the library from `src/lib.rs`.
+The stub builds today; the `dxc` CLI is in `src/main.rs`, the library in `src/lib.rs`. After the split, the same commands will build the full compiler.
 
 ---
 
