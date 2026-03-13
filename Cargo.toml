@@ -1,0 +1,9 @@
+[package]
+name = "dexa-compiler"
+version = "0.1.0"
+edition = "2021"
+description = "Reference compiler for the DEXA language (placeholder until 1.0.0)."
+license = "Apache-2.0"
+authors = ["DX <github.com/dxiv>"]
+
+[dependencies]

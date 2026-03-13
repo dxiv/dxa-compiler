@@ -1,5 +1,7 @@
 # dxa-compiler
 
+> **GitHub About:** Future home of the DEXA reference compiler. Developed in private monorepo until 1.0.0.
+
 Reference compiler for **DEXA** — a statically typed, deterministic language for the DXA stack (GPU kernels, native binaries, contract VMs). Written in Rust.
 
 **Status:** This repo is a **placeholder**. The compiler is currently developed in [dxa-dev](https://github.com/dxiv/dxa-dev). When the monorepo is split, this repo will hold the compiler source, CLI, and examples.
